@@ -7,10 +7,10 @@
   "disable_rest": true,
   "endpoints": [
     {
-      "endpoint": "/",
+      "endpoint": "/response.json",
       "backend": [
         {
-          "url_pattern": "/.*",
+          "url_pattern": "/response.json",
           "encoding": "no-op",
           "host": [
             "http://mynginx"

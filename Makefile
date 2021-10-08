@@ -7,7 +7,7 @@ reload: stop run
 
 .PHONY: stop
 stop:
-	- docker stop my-nginx
+	- docker stop mynginx
 	- docker stop krakend
 
 .PHONY: run-nginx
