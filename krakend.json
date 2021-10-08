@@ -3,18 +3,26 @@
   "extra_config": {},
   "timeout": "3000ms",
   "cache_ttl": "300s",
-  "name": "Kludged",
-  "disable_rest": true,
+  "output_encoding": "json",
+  "name": "myservice",
+  "port": 8080,
+  "disable_rest": false,
   "endpoints": [
     {
-      "endpoint": "/response.json",
+      "endpoint": "/",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "extra_config": {},
       "backend": [
         {
           "url_pattern": "/response.json",
           "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {},
           "host": [
             "http://mynginx"
-          ]
+          ],
+          "disable_host_sanitize": true
         }
       ]
     }
