@@ -11,12 +11,22 @@
     {
       "endpoint": "/",
       "method": "GET",
-      "output_encoding": "no-op",
+      "output_encoding": "json",
       "extra_config": {},
       "backend": [
         {
           "url_pattern": "/response.json",
-          "encoding": "no-op",
+          "encoding": "json",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "http://mynginx"
+          ],
+          "disable_host_sanitize": true
+        },
+        {
+          "url_pattern": "/whatever.json",
+          "encoding": "json",
           "method": "GET",
           "extra_config": {},
           "host": [
