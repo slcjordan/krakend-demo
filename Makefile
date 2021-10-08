@@ -4,6 +4,7 @@ run: run-nginx run-krakend
 
 .PHONY: reload
 reload: stop run
+	docker logs -f krakend
 
 .PHONY: stop
 stop:
