@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extra_config": {},
+  "timeout": "3000ms",
+  "cache_ttl": "300s",
+  "name": "Kludged",
+  "disable_rest": true,
+  "endpoints": [
+    {
+      "endpoint": "/",
+      "backend": [
+        {
+          "url_pattern": "/.*",
+          "encoding": "no-op",
+          "host": [
+            "http://mynginx"
+          ]
+        }
+      ]
+    }
+  ]
+}
