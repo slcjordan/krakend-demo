@@ -9,6 +9,24 @@
   "disable_rest": false,
   "endpoints": [
     {
+      "endpoint": "/auth",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "backend": [
+        {
+          "url_pattern": "/hello",
+          "encoding": "json",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "http://authserver:8090"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
       "endpoint": "/",
       "method": "GET",
       "output_encoding": "json",
